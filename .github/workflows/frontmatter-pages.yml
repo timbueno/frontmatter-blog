@@ -1,0 +1,21 @@
+name: Frontmatter Pages
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  site:
+    if: >-
+      (github.event_name == 'pull_request' && github.base_ref == 'main') ||
+      (github.event_name != 'pull_request' && github.ref == 'refs/heads/main')
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: Deadpan-LLC/frontmatter-actions/.github/workflows/hugo-pages.yml@32628f567ce2d43d8f3809e3345211415cb868f0
+    with:
+      config-path: .frontmatter/build.json
+      publication-branch: "main"
+      deploy: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}

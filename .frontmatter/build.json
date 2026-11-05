@@ -1,0 +1,14 @@
+{
+  "baseURL" : "https://timbueno.github.io/frontmatter-blog/",
+  "build" : {
+    "garbageCollect" : true,
+    "minify" : true
+  },
+  "hugo" : {
+    "edition" : "extended",
+    "version" : "0.169.0"
+  },
+  "schemaVersion" : 1,
+  "siteDirectory" : ".",
+  "timeZone" : "UTC"
+}

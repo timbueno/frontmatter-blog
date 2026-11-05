@@ -1,0 +1,20 @@
+{
+  "baseURL" : "https://timbueno.github.io/frontmatter-blog/",
+  "locale" : "en-US",
+  "menus" : {
+    "main" : [
+      {
+        "name" : "Home",
+        "url" : "https://timbueno.github.io/frontmatter-blog/",
+        "weight" : 1
+      },
+      {
+        "name" : "Blog",
+        "url" : "https://timbueno.github.io/frontmatter-blog/blog/",
+        "weight" : 2
+      }
+    ]
+  },
+  "theme" : "hugo-bearblog",
+  "title" : "Frontmatter Blog"
+}
